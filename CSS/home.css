@@ -141,6 +141,19 @@ textarea:not([rows]) {
         width: 20%;
         height: 100%;
     }
+    .nav_bar img{
+        width: 75%;
+        margin-left: 10%;
+    }
+    .nav_bar a.logo{
+        display: flex;
+        align-items: center ;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        margin-right: 2%;
+        }
     .nav_bar h1{
         font-family: var(--nadpis);
         font-size: 1.4rem;
@@ -333,29 +346,41 @@ textarea:not([rows]) {
         justify-content: center;
 
         overflow: hidden;
+
+        background-image: url(../images/newri_irsko/image_123650291.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-    #landing_page article{
+    #landing_page section{
         width: 100%;
         height: 100%;
 
         display: flex;
+        justify-content: center;
+                
+        background-color: rgba(0, 0, 0, 0.516);
+    }
+    #landing_page article{
+        width: 90%;
+        height: 100%;
+
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
 
         text-align: center;
 
         z-index: 3;
-        
-        background-color: rgba(0, 0, 0, 0.516);
     }
     #landing_page aside{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
 
-        text-align: center;
+        text-align: left;
 
         z-index: 3;
     }
@@ -374,14 +399,6 @@ textarea:not([rows]) {
         font-family: var(--podnadpis);
 
         color: var(--white);
-    }
-    #landing_page video{
-        height: 150%;
-
-        position: absolute;
-        top: -25%;
-        left: -25%;
-        z-index: -1;
     }
     #landing_page a{
         box-sizing: border-box;
@@ -404,16 +421,7 @@ textarea:not([rows]) {
     #landing_page a:hover{
         background-color: transparent;
     }
-    @media screen and (max-width: 827px){
-        #landing_page video{
-            top: -25%;
-            left: -75%;
-        }
-    }
     @media screen and (max-width: 455px){
-        #landing_page video{
-            left: -100%;
-        }
         #landing_page h1{
             font-size: 2rem;
         }
@@ -440,16 +448,9 @@ textarea:not([rows]) {
         justify-content: space-between;
         align-items: center;
     }
-    #about_us figure{
-        width: 40%;
+    #about_us video{
+        width: 45%;
         height: 400px;
-
-        overflow: hidden;
-
-        background-image: url(../images/newri_irsko/image_123650291.JPG);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
 
         border-radius: 20px;
         box-shadow: var(--black) 10px 10px 50px;
@@ -479,8 +480,13 @@ textarea:not([rows]) {
             width: 100%;
             margin-bottom: 10%;
         }
-        #about_us article figure{
-            display: none;
+        #about_us article video{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 560px) {
+        .nav_bar aside{
+            width: 45%;
         }
     }
 }
@@ -699,7 +705,7 @@ textarea:not([rows]) {
         font-family: var(--nadpis);
         font-size: 2rem;
 
-        margin-bottom: 3%;
+        margin-bottom: 1%;
         margin-top: 0;
 
         color: white;
