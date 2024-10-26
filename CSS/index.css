@@ -1,0 +1,495 @@
+@layer CSS_Reset{ 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+}
+@layer Variables{
+    :root{
+        --blue: #165684;
+        --white: #F5F5F5;
+        --black: #252525;
+    }
+    *{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+}
+@layer Navigation{
+    header{
+        width: 100%;
+        height: 10vh;
+
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+
+        background-color: var(--blue);
+    }
+    .nav_bar{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav_list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 40%;
+        height: 100%;
+        margin-right: 5%;
+
+        list-style-type: none;
+    }
+    .nav_bar aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20%;
+        height: 100%;
+    }
+    .nav_bar h1{
+        font-family: Verdana, Geneva, sans-serif;
+
+        color: white;
+
+        padding: 0;
+        margin: 0;
+    }
+    .nav_bar a{
+        font-family: Verdana, Geneva, sans-serif;
+
+        text-decoration: none;
+
+        color: white;
+
+        position: relative;
+
+        padding-bottom: 2px;
+    }
+    .nav_bar ul a::after {  
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        right: 0;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    .nav_bar ul a:hover:after{
+        width: 100%; 
+    }
+}   
+@layer Landing_Page{
+    #landing_page{
+        width: 100%;
+        height: 100vh;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+
+        background-image: url(../images/sportovy_klub_brusel/image_123650291.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    #landing_page article{
+        width: 50%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        z-index: 3;
+    }
+    #landing_page aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        z-index: 3;
+    }
+    #landing_page h1{
+        font-size: 4rem;
+        font-family: Verdana, Geneva, sans-serif;
+
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 3%;
+
+        color: var(--white);
+    }
+    #landing_page strong{
+        font-size: 1.3rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        color: var(--white);
+    }
+    #landing_page .dark{
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.675);
+
+        z-index: 2;
+    }
+    #landing_page a{
+        box-sizing: border-box;
+        padding: 1% 3%;
+        border: 2px solid var(--blue);
+        border-radius: 15px;
+
+        background-color: var(--blue);
+
+        font-size: 1.2rem;
+        font-weight: 520;
+        font-family: Verdana, sans-serif;
+
+        text-decoration: none;
+
+        color: var(--white) ;
+
+        transition: all .3s;
+    }
+    #landing_page a:hover{
+        background-color: transparent;
+    }
+}
+@layer About_Us{
+    #about_us{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+    }
+    #about_us article{
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #about_us figure{
+        width: 40%;
+        height: 400px;
+
+        overflow: hidden;
+
+        background-image: url(../images/newri_irsko/image_123650291.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 20px;
+        box-shadow: var(--black) 10px 10px 50px;
+    }
+    #about_us aside{
+        width: 45%;
+    }
+    #about_us h2{
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 2rem;
+    }
+    #about_us p{
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 1rem;
+        
+        text-align: justify;
+    }
+}
+@layer Services{
+    #services{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+    #services article{
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #services h2{
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2rem;
+
+        margin-bottom: 2.5%;
+    }
+    #services aside{
+        width: 30%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #165684;
+
+        border-radius: 20px;
+        padding: 2.5% 2.5% 0 2.5%;
+        margin-bottom: 2%;
+    }
+    #services figure{
+        width: 100%;
+
+        margin: 0;
+    }
+    #services img{
+        border-radius: 15px;
+
+        width: 100%;
+    }
+    #services h3{
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 1rem;
+
+        color: white;
+    }
+}
+@layer Work{
+    #work{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+    #work article{
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #work h2{
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2rem;
+
+        margin-bottom: 2.5%;
+    }
+    #work aside{
+        width: 30%;
+    }
+    #work figure{
+        width: 100%;
+        height: 100%;
+
+        margin: 0;
+    }
+    #work .content{
+        width: 100%;
+        position: relative;
+        
+        display: flex;
+        justify-content: center;
+    }
+    #work .content img{
+        width: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .carousel {
+        overflow: hidden;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+    }
+    
+    .carousel-content {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-content img {
+        min-width: 100%;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+    
+    button.prev, button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    button.prev {
+        left: 10px;
+    }
+    
+    button.next {
+        right: 10px;
+    }
+    aside{
+        position: relative;
+
+        margin-bottom: 5%;
+    }
+    #work figcaption{
+        text-align: center;
+        font-family: Verdana, Geneva, sans-serif;
+        color: rgb(75, 75, 75);
+        margin-top: 1%;
+    }
+}
+@layer Footer{
+    footer{
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        background-color: #1d272f;
+    }
+    footer section{
+        width: 28%;
+        height: 100%;
+        
+        padding: 1%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer p{
+        padding: 0;
+        margin: 0;
+
+        color: var(--white);
+
+        font-family: Verdana, Geneva, sans-serif;
+    }
+    footer a{
+        text-decoration: none;
+    }
+    footer a:hover{
+        text-decoration: underline;
+    }
+}
