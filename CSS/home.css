@@ -264,11 +264,11 @@ textarea:not([rows]) {
         color: var(--white);
     }
     #landing_page video{
-        width: 100%;
+        height: 150%;
 
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -25%;
+        left: -25%;
         z-index: -1;
     }
     #landing_page a{
@@ -291,6 +291,23 @@ textarea:not([rows]) {
     }
     #landing_page a:hover{
         background-color: transparent;
+    }
+    @media screen and (max-width: 827px){
+        #landing_page video{
+            top: -25%;
+            left: -75%;
+        }
+    }
+    @media screen and (max-width: 455px){
+        #landing_page video{
+            left: -100%;
+        }
+        #landing_page h1{
+            font-size: 2rem;
+        }
+        #landing_page strong{
+            font-size: 1rem;
+        }
     }
 }
 @layer About_Us{
@@ -337,6 +354,22 @@ textarea:not([rows]) {
         font-size: 1rem;
         
         text-align: justify;
+    }
+    @media screen and (max-width: 1000px){
+        #about_us h2{
+            text-align: center;
+        }
+        #about_us article{
+            flex-direction: column;
+            justify-content: center;
+        }
+        #about_us article aside{
+            width: 100%;
+            margin-bottom: 10%;
+        }
+        #about_us article figure{
+            display: none;
+        }
     }
 }
 @layer Services{
@@ -398,6 +431,16 @@ textarea:not([rows]) {
         margin: 0;
         padding: 0;
     }
+    @media screen and (max-width: 1000px){
+        #services h2{
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 876px){
+        #services aside{
+            width: 100%;
+        }
+    }
 }
 @layer Work{
     #work{
@@ -430,6 +473,8 @@ textarea:not([rows]) {
     }
     #work aside{
         width: 30%;
+        min-width: 350px;
+        margin: 1%;
     }
     #work figure{
         width: 100%;
@@ -497,6 +542,19 @@ textarea:not([rows]) {
         font-family: Verdana, Geneva, sans-serif;
         color: rgb(75, 75, 75);
         margin-top: 1%;
+    }
+    @media screen and (max-width: 1000px) {
+        #work h2{
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 475px) {
+        #work h2{
+            text-align: center;
+        }
+        #work aside{
+            min-width: 260px;
+        }
     }
 }
 @layer Footer{
@@ -567,10 +625,53 @@ textarea:not([rows]) {
 
         font-family: Verdana, Geneva, sans-serif;
     }
+    footer iframe{
+        width: 450px;
+        height: 300px;
+    }
     footer a{
         text-decoration: none;
     }
     footer a:hover{
         text-decoration: underline;
+    }
+    @media screen and (max-width: 740px){
+        footer section#contact_info{
+            flex-direction: column;
+        }
+        footer section#contact_info aside:first-child{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+
+            margin-bottom: 10%;
+        }
+        footer section#contact_info aside:first-child p{
+            margin: 0;
+            padding: 0;
+            width: 40%;
+
+            text-align: center;
+        }
+        footer section#contact_info aside:first-child h3{
+            width: 100%;
+            text-align: center;
+        }
+        footer iframe{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 465px){
+        footer section#contact_info aside:first-child p{
+            width: 100%;
+        }
+        footer section#copy{
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
