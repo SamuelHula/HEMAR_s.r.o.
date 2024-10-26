@@ -504,23 +504,64 @@ textarea:not([rows]) {
         width: 100%;
 
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-
-        background-color: #1d272f;
     }
-    footer section{
-        width: 32%;
+    footer section#contact_info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 3%;
+
+        width: 100%;
+
+        background-color: var(--blue);
+    }
+    footer section#contact_info aside:first-child{
+        width: 35%;
+
+        display: flex;
+        flex-direction: column;
+    }
+    footer section#contact_info h3{
+        font-family: var(--nadpis);
+        font-size: 2rem;
+
+        margin-bottom: 3%;
+        margin-top: 0;
+
+        color: white;
+    }
+    footer section#contact_info strong{
+        font-family: var(--podnadpis);
+        font-size: 1.4rem;
+    }
+    footer section#contact_info p{
+        color: var(--white);
+    }
+    footer section#contact_info a{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    footer section#copy{
+        width: 100%;
         height: 100%;
         
         padding: 1%;
         
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        
+        background-color: #1d272f;
     }
-    footer p{
+    footer section#copy p{
         padding: 0;
         margin: 0;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
 
         color: var(--white);
 
