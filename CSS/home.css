@@ -350,7 +350,7 @@ textarea:not([rows]) {
 
         overflow: hidden;
 
-        background-image: url(../images/newri_irsko/image_123650291.JPG);
+        background-image: url(../images/pozadie.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -702,10 +702,18 @@ textarea:not([rows]) {
         background-color: var(--blue);
     }
     footer section#contact_info aside:first-child{
-        width: 35%;
+        width: 25%;
 
         display: flex;
         flex-direction: column;
+    }
+    footer section#contact_info aside:nth-child(2){
+        width: 25%;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 10%;
     }
     footer section#contact_info h3{
         font-family: var(--nadpis);
@@ -722,6 +730,7 @@ textarea:not([rows]) {
     }
     footer section#contact_info p{
         color: var(--white);
+        font-family: Verdana, Geneva, sans-serif;
     }
     footer section#contact_info a{
         color: white;
@@ -759,11 +768,12 @@ textarea:not([rows]) {
     footer a:hover{
         text-decoration: underline;
     }
-    @media screen and (max-width: 740px){
+    @media screen and (max-width: 1092px){
         footer section#contact_info{
             flex-direction: column;
         }
-        footer section#contact_info aside:first-child{
+        footer section#contact_info aside:first-child,
+        footer section#contact_info aside:nth-child(2){
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -773,15 +783,19 @@ textarea:not([rows]) {
             width: 100%;
 
             margin-bottom: 10%;
+            margin-left: 0;
+            margin-right: 0;
         }
-        footer section#contact_info aside:first-child p{
+        footer section#contact_info aside:first-child p,
+        footer section#contact_info aside:nth-child(2) p{
             margin: 0;
             padding: 0;
             width: 40%;
 
             text-align: center;
         }
-        footer section#contact_info aside:first-child h3{
+        footer section#contact_info aside:first-child h3,
+        footer section#contact_info aside:nth-child(2) h3{
             width: 100%;
             text-align: center;
         }
