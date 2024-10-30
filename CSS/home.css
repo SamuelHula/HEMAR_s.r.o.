@@ -387,7 +387,7 @@ textarea:not([rows]) {
 
         z-index: 3;
     }
-    #landing_page h1{
+    #landing_page h2{
         font-size: 4rem;
         font-family: var(--nadpis);
 
@@ -425,7 +425,7 @@ textarea:not([rows]) {
         background-color: transparent;
     }
     @media screen and (max-width: 455px){
-        #landing_page h1{
+        #landing_page h2{
             font-size: 2rem;
         }
         #landing_page strong{
