@@ -225,7 +225,50 @@ textarea:not([rows]) {
     .burger{
         display: none;
     }
+    .nav_bar .icons{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav_bar .icons figure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+        margin-left: 20px;
+    }
+    .nav_bar .icons figure img{
+        width: 25px;
+    }
+    .translate{
+        display: none;
+    }
     @media screen and (max-width: 1279px){
+        .translate{
+            display: block;
+            height: 20px;
+            width: 100%;
+        }
+        .translate figure{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+        }
+        .translate figure img{
+            height: 30px;
+            width: 30px;
+        }
+        .nav_bar .icons{
+            display: none;
+        }
         .nav_list{
             display: none;
         }
